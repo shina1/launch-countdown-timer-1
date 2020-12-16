@@ -2,7 +2,8 @@ $primary-color: hsl(237, 18%, 59%);
 $secondary-color: hsl(345, 95%, 68%);
 $light-color: hsl(0, 0%, 100%);
 $light-dark-color: hsl(236, 21%, 26%);
-$light2-dark-color: hsl(235, 19%, 23%);
+$light2-dark-color: hsl(226, 21%, 24%);
+$light3-dark-color: hsl(224, 21%, 21%);
 $medium-dark-color: hsl(235, 16%, 14%);
 $very-dark-color: hsl(234, 17%, 12%);
 
@@ -12,6 +13,7 @@ $font-size: 14px;
 
 %card-part {
   height: 33px;
+  background-color: $light-dark-color;
 }
 %card-part-medium {
   height: 70px;
@@ -24,6 +26,7 @@ $font-size: 14px;
   height: 6px;
   border-radius: 50%;
   position: absolute;
+  z-index: 1;
   top: calc(50% - 3px);
   background-color: $medium-dark-color;
 }

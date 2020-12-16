@@ -15,13 +15,13 @@
   <body>
     <div class="container">
       <main class="main">
-        <h2 class="title">WE'RE LAUNCHING SOON</h2>
-        <div class="counter">
+        <h2 id="title" class="title">WE'RE LAUNCHING SOON</h2>
+        <div id="counter" class="counter">
           <div class="countdown">
             <div class="card">
-              <div class="card__top"></div>
+              <div id="top_card_days" class="card__top"></div>
               <div class="card__number">
-                <span>08</span>
+                <span id="days"></span>
               </div>
               <div class="card__bottom"></div>
             </div>
@@ -31,9 +31,9 @@
           </div>
           <div class="countdown">
             <div class="card">
-              <div class="card__top"></div>
+              <div id="top_card_hours" class="card__top"></div>
               <div class="card__number">
-                <span>23</span>
+                <span id="hours"></span>
               </div>
               <div class="card__bottom"></div>
             </div>
@@ -43,9 +43,9 @@
           </div>
           <div class="countdown">
             <div class="card">
-              <div class="card__top"></div>
+              <div id="top_card_minutes" class="card__top"></div>
               <div class="card__number">
-                <span>55</span>
+                <span id="minutes"></span>
               </div>
               <div class="card__bottom"></div>
             </div>
@@ -55,9 +55,9 @@
           </div>
           <div class="countdown">
             <div class="card">
-              <div class="card__top"></div>
+              <div id="top_card_seconds" class="card__top"></div>
               <div class="card__number">
-                <span>41</span>
+                <span id="seconds"></span>
               </div>
               <div class="card__bottom"></div>
             </div>
@@ -81,5 +81,6 @@
         </div>
       </footer>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>

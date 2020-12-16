@@ -1,5 +1,6 @@
 .card__bottom, .card__top {
   height: 33px;
+  background-color: #343650;
 }
 
 .card::after, .card::before {
@@ -9,6 +10,7 @@
   height: 6px;
   border-radius: 50%;
   position: absolute;
+  z-index: 1;
   top: calc(50% - 3px);
   background-color: #1e1f29;
 }
@@ -73,15 +75,17 @@ body {
 
 .card {
   width: 70px;
+  border-radius: 5px;
   position: relative;
+  perspective: 250px;
+  background-color: #30364a;
 }
 .card__top {
   border-radius: 5px 5px 0 0;
-  background-color: #303146;
+  background-color: #30364a;
 }
 .card__bottom {
   border-radius: 0 0 5px 5px;
-  background-color: #343650;
   box-shadow: 0px 5px 2.5px 0px black;
 }
 .card__bottom::before {
@@ -137,6 +141,27 @@ body {
 }
 .sn-logo:hover {
   color: #fb6087;
+}
+
+.count {
+  animation: countdown 1s infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes countdown {
+  0% {
+    transform: rotateX(0deg);
+  }
+  35% {
+    background-color: #2a3041;
+  }
+  75% {
+    box-shadow: 0px -2.5px 1.5px 0px black;
+  }
+  100% {
+    transform: rotateX(-180deg);
+    background-color: #343650;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

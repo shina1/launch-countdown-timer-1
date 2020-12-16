@@ -34,7 +34,10 @@
 
 .card {
   width: 70px;
+  border-radius: 5px;
   position: relative;
+  perspective: 250px;
+  background-color: $light2-dark-color;
   &__top {
     @extend %card-part;
     border-radius: 5px 5px 0 0;
@@ -43,7 +46,6 @@
   &__bottom {
     @extend %card-part;
     border-radius: 0 0 5px 5px;
-    background-color: $light-dark-color;
     box-shadow: 0px 5px 2.5px 0px black;
     &::before {
       content: '';

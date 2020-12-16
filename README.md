@@ -7,4 +7,4 @@ A launch countdown timer with animation
 * JavaScript (Vanilla)
 
 ### Preview
-[![N|Solid](https://repository-images.githubusercontent.com/321787783/dda84900-3f27-11eb-9393-2cdccffd71bb)](https://devnaftan.github.io/launch-countdown-timer/)
+[![N|Solid](https://repository-images.githubusercontent.com/321861944/029dbb80-3f2a-11eb-9981-4115d393859c)](https://devnaftan.github.io/launch-countdown-timer/)
