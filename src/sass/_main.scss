@@ -36,7 +36,7 @@
   width: 70px;
   border-radius: 5px;
   position: relative;
-  perspective: 250px;
+  perspective: 150px;
   background-color: $light2-dark-color;
   &__top {
     @extend %card-part;

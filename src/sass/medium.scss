@@ -20,6 +20,7 @@
 
 .card {
   width: 150px;
+  perspective: 300px;
   &__top {
     @extend %card-part-medium;
   }
