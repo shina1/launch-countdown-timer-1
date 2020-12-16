@@ -1,0 +1,16 @@
+{
+  "name": "launch-countdown-timer",
+  "version": "1.0.0",
+  "description": "Launch countdown timer",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "build-css": "sass --watch ./src/sass:./css"
+  },
+  "keywords": [
+    "countdown",
+    "javascript"
+  ],
+  "author": "Naftan <me@naftan.dev>",
+  "license": "MIT"
+}

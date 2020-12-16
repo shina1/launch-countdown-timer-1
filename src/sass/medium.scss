@@ -1,0 +1,48 @@
+@import './variables';
+
+.title {
+  font-size: 22px;
+  letter-spacing: .45rem;
+}
+
+.counter {
+  padding: 93px 0;
+}
+
+.countdown {
+  margin: 10px 15px;
+  &__title {
+    margin-top: 25px;
+    font-size: 1rem;
+    letter-spacing: .3rem;
+  }
+}
+
+.card {
+  width: 150px;
+  &__top {
+    @extend %card-part-medium;
+  }
+  &__bottom {
+    @extend %card-part-medium;
+  }
+  &__number {
+    font-size: 5rem;
+  }
+  &::before {
+    @extend %card-detail-medium;
+    left: -6px;
+  }
+  &::after {
+    @extend %card-detail-medium;
+    right: -6px;
+  }
+}
+
+.footer {
+  background-size: 100% 100%;
+}
+
+.sn-logo {
+  margin: 0 16px;
+}

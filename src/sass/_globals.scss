@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+  font-size: $font-size;
+  color: $light-color;
+  background: url('../assets/images/bg-stars.svg'), $medium-dark-color;
+  background-size: 1000px;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+}

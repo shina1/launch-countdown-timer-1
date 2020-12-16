@@ -1,0 +1,142 @@
+.card__bottom, .card__top {
+  height: 33px;
+}
+
+.card::after, .card::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 3px);
+  background-color: #1e1f29;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  color: white;
+  background: url("../assets/images/bg-stars.svg"), #1e1f29;
+  background-size: 1000px;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 141px 10px 277px;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: 0.4rem;
+  text-align: center;
+}
+
+.counter {
+  display: grid;
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  width: 100%;
+  max-width: 400px;
+  padding: 46px 0;
+  justify-content: center;
+}
+
+.countdown {
+  margin: 10px 8px;
+}
+.countdown__title {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.45rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.card {
+  width: 70px;
+  position: relative;
+}
+.card__top {
+  border-radius: 5px 5px 0 0;
+  background-color: #303146;
+}
+.card__bottom {
+  border-radius: 0 0 5px 5px;
+  background-color: #343650;
+  box-shadow: 0px 5px 2.5px 0px black;
+}
+.card__bottom::before {
+  content: "";
+  display: block;
+  height: 1px;
+  opacity: 0.5;
+  background-color: #1e1f29;
+}
+.card__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #fb6087;
+}
+.card::before {
+  left: -3px;
+}
+.card::after {
+  right: -3px;
+}
+
+.footer {
+  display: flex;
+  height: 200px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("../assets/images/pattern-hills.svg") no-repeat right;
+  background-size: 300% 100%;
+}
+
+.sn-container {
+  display: flex;
+  margin-bottom: 34px;
+}
+
+.sn-logo {
+  margin: 0 16px;
+  font-size: 1.65rem;
+  color: #8486a9;
+}
+.sn-logo:hover {
+  color: #fb6087;
+}
+
+/*# sourceMappingURL=style.css.map */

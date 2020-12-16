@@ -1,0 +1,105 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 141px 10px 277px;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: .4rem;
+  text-align: center;
+}
+
+.counter {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  width: 100%;
+  max-width: 400px;
+  padding: 46px 0;
+  justify-content: center;
+}
+
+.countdown {
+  margin: 10px 8px;
+  &__title {
+    display: block;
+    margin-top: 15px;
+    font-size: .45rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    opacity: .75;
+  }
+}
+
+.card {
+  width: 70px;
+  position: relative;
+  &__top {
+    @extend %card-part;
+    border-radius: 5px 5px 0 0;
+    background-color: $light2-dark-color;
+  }
+  &__bottom {
+    @extend %card-part;
+    border-radius: 0 0 5px 5px;
+    background-color: $light-dark-color;
+    box-shadow: 0px 5px 2.5px 0px black;
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      opacity: .5;
+      background-color: $medium-dark-color;
+    }
+  }
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: $secondary-color;
+  }
+  &::before {
+    @extend %card-detail;
+    left: -3px;
+  }
+  &::after {
+    @extend %card-detail;
+    right: -3px;
+  }
+}
+
+.footer {
+  display: flex;
+  height: 200px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: flex-end;
+  background: url('../assets/images/pattern-hills.svg') no-repeat right;
+  background-size: 300% 100%;
+}
+
+.sn-container {
+  display: flex;
+  margin-bottom: 34px;
+}
+
+.sn-logo {
+  margin: 0 16px;
+  font-size: 1.65rem;
+  color: $primary-color;
+  &:hover {
+    color: $secondary-color;
+  }
+}

@@ -1,0 +1,50 @@
+.card__bottom, .card__top {
+  height: 70px;
+}
+
+.card::after, .card::before {
+  width: 12px;
+  height: 12px;
+  top: calc(50% - 6px);
+}
+
+.title {
+  font-size: 22px;
+  letter-spacing: 0.45rem;
+}
+
+.counter {
+  padding: 93px 0;
+}
+
+.countdown {
+  margin: 10px 15px;
+}
+.countdown__title {
+  margin-top: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.card {
+  width: 150px;
+}
+.card__number {
+  font-size: 5rem;
+}
+.card::before {
+  left: -6px;
+}
+.card::after {
+  right: -6px;
+}
+
+.footer {
+  background-size: 100% 100%;
+}
+
+.sn-logo {
+  margin: 0 16px;
+}
+
+/*# sourceMappingURL=medium.css.map */
