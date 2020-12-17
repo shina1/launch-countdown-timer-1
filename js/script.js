@@ -1,5 +1,5 @@
 function app() {
-  const date = 'Dec 17, 2020 14:00:00';
+  const date = 'Dec 25, 2020 00:00:00';
 
   const $days = document.getElementById('days');
   const $hours = document.getElementById('hours');

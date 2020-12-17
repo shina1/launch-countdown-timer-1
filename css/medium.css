@@ -28,7 +28,7 @@
 
 .card {
   width: 150px;
-  perspective: 300px;
+  perspective: 325px;
 }
 .card__number {
   font-size: 5rem;
