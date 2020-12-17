@@ -78,11 +78,11 @@ body {
   border-radius: 5px;
   position: relative;
   perspective: 150px;
-  background-color: #30364a;
+  background-color: #313749;
 }
 .card__top {
   border-radius: 5px 5px 0 0;
-  background-color: #30364a;
+  background-color: #313749;
 }
 .card__bottom {
   border-radius: 0 0 5px 5px;
@@ -153,7 +153,7 @@ body {
     transform: rotateX(0deg);
   }
   35% {
-    background-color: #2a3041;
+    background-color: #2d2f43;
   }
   75% {
     box-shadow: 0px -2.5px 1.5px 0px black;
