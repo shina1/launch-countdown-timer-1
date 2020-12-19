@@ -1,20 +1,3 @@
-.card__bottom, .card__top {
-  height: 33px;
-  background-color: #343650;
-}
-
-.card::after, .card::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  top: calc(50% - 3px);
-  background-color: #1e1f29;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -75,43 +58,56 @@ body {
 
 .card {
   width: 70px;
+  height: 66px;
   border-radius: 5px;
   position: relative;
-  perspective: 125px;
+  line-height: 66px;
   background-color: #343650;
+  box-shadow: 0px 5px 0px 0px #191a24;
 }
-.card__top {
-  border-radius: 5px 5px 0 0;
-}
-.card__bottom {
-  border-radius: 0 0 5px 5px;
-  box-shadow: 0px 5px 2.5px 0px black;
-}
-.card__bottom::before {
+.card::before, .card::after {
   content: "";
   display: block;
-  height: 1px;
-  opacity: 0.5;
-  background-color: #1e1f29;
-}
-.card__number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: #fb6087;
+  top: calc(50% - 3px);
+  z-index: 1;
+  background-color: #1e1f29;
 }
 .card::before {
   left: -3px;
 }
 .card::after {
   right: -3px;
+}
+
+.digit::before, .digit::after {
+  content: attr(data-digit);
+  position: absolute;
+  left: 0;
+  right: 0;
+  perspective: 125px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fb6087;
+  background-color: #343650;
+  filter: brightness(85%);
+}
+.digit::before {
+  border-radius: 5px 5px 0 0;
+  top: 0;
+  bottom: 50%;
+}
+.digit::after {
+  border-top: 1px solid #1e1f29;
+  border-radius: 0 0 5px 5px;
+  top: 50%;
+  line-height: 0;
+  bottom: 0;
+  filter: brightness(100%);
 }
 
 .footer {
@@ -123,14 +119,15 @@ body {
   bottom: 0;
   left: 0;
   justify-content: center;
-  align-items: flex-end;
-  background: url("../assets/images/pattern-hills.svg") no-repeat right;
+  align-items: center;
+  background: url("../assets/images/pattern-hills.svg") no-repeat;
+  background-position: -625px;
   background-size: 300% 100%;
 }
 
 .sn-container {
   display: flex;
-  margin-bottom: 34px;
+  margin-top: 78px;
 }
 
 .sn-logo {

@@ -1,5 +1,9 @@
 @import './variables';
 
+.main {
+  padding: 135px 10px 245px;
+}
+
 .title {
   font-size: 22px;
   letter-spacing: .45rem;
@@ -20,28 +24,44 @@
 
 .card {
   width: 150px;
-  perspective: 325px;
-  &__top {
-    @extend %card-part-medium;
-  }
-  &__bottom {
-    @extend %card-part-medium;
-  }
-  &__number {
-    font-size: 5rem;
+  height: 140px;
+  border-radius: 8px;
+  line-height: 140px;
+  box-shadow: 0px 10px 0px 0px $very-dark-color;
+  &::before,
+  &::after {
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
   }
   &::before {
-    @extend %card-detail-medium;
     left: -6px;
   }
   &::after {
-    @extend %card-detail-medium;
     right: -6px;
   }
 }
 
+.digit {
+  &::before,
+  &::after {
+    font-size: 5rem;
+  }
+  &::before {
+    border-radius: 8px 8px 0 0;
+  }
+  &::after {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
 .footer {
+  background-position: right;
   background-size: 100% 100%;
+}
+
+.sn-container {
+  margin-top: 34px;
 }
 
 .sn-logo {
