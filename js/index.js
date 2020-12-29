@@ -1,42 +1,47 @@
-function app() {
-  const $days = document.getElementById('days');
-  const $hours = document.getElementById('hours');
-  const $minutes = document.getElementById('minutes');
-  const $seconds = document.getElementById('seconds');
+(function app() {
+  const countdownValue = {
+    days: 8,
+    hours: 23,
+    minutes: 55,
+    seconds: 41
+  };
 
-  let countDown = 777341000;
+  const target = {
+    days: document.getElementById('days'),
+    hours: document.getElementById('hours'),
+    minutes: document.getElementById('minutes'),
+    seconds: document.getElementById('seconds')
+   };
 
-  const counter = setInterval(function() {
+  function countdown() {
+    let seconds;
+    let minutes;
+    let hours;
+    let days;
 
-    let days = Math.floor(countDown / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-
-    if (String(days).length == 1) {
-      days = `0${days}`
+    // Seconds's render
+    if (countdownValue.seconds > 0) {
+      countdownValue.seconds -= 1
+      seconds = countdownValue.seconds < 10 ? `0${countdownValue.seconds}` : `${countdownValue.seconds}`;
+      target.seconds.querySelector('.card-face-back').textContent = seconds;
+      target.seconds.querySelector('.base').dataset.baseBefore = seconds;
+      target.seconds.querySelector('.card').classList.add('flip');
+      target.seconds.querySelector('.card').addEventListener('animationend', event => {
+        if(event.animationName === 'flip') {
+          target.seconds.querySelector('.card-face-front').textContent = seconds;
+          target.seconds.querySelector('.base').dataset.baseAfter = seconds;
+          target.seconds.querySelector('.card').classList.remove('flip');
+        }
+      })
     }
-    if (String(hours).length == 1) {
-      hours = `0${hours}`
-    }
-    if (String(minutes).length == 1) {
-      minutes = `0${minutes}`
-    }
-    if (String(seconds).length == 1) {
-      seconds = `0${seconds}`
-    }
+  }
 
-    $days.dataset.digit = days;
-    $hours.dataset.digit = hours;
-    $minutes.dataset.digit = minutes;
-    $seconds.dataset.digit = seconds;
-
-    countDown -= 1000;
-
-    if (countDown <= 0) {
-      clearInterval(counter);
+  let run = setInterval(() => {
+    if (countdownValue.days > 0 || countdownValue.hours > 0 || countdownValue.minutes > 0 || countdownValue.seconds > 0) {
+      countdown();
+    } else {
+      clearInterval(run);
+      console.log('Launch!');
     }
   }, 1000);
-}
-
-app();
+})();
