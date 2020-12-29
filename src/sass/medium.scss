@@ -23,6 +23,8 @@
 }
 
 .card-container {
+  width: 150px;
+  height: 140px;
   font-size: 5rem;
   &::before,
   &::after {
@@ -39,15 +41,13 @@
 }
 
 .base {
-  width: 150px;
-  height: 140px;
   perspective: 400px;
   &::before {
-    border-radius: 8px 8px 0 0;
-  }
-  &::after {
     border-radius: 0 0 8px 8px;
     box-shadow: 0px 10px 0px 0px $very-dark-color;
+  }
+  &::after {
+    border-radius: 8px 8px 0 0;
   }
 }
 

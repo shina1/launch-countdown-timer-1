@@ -21,6 +21,8 @@
 }
 
 .card-container {
+  width: 150px;
+  height: 140px;
   font-size: 5rem;
 }
 .card-container::before, .card-container::after {
@@ -36,16 +38,14 @@
 }
 
 .base {
-  width: 150px;
-  height: 140px;
   perspective: 400px;
 }
 .base::before {
-  border-radius: 8px 8px 0 0;
-}
-.base::after {
   border-radius: 0 0 8px 8px;
   box-shadow: 0px 10px 0px 0px #191a24;
+}
+.base::after {
+  border-radius: 8px 8px 0 0;
 }
 
 .card-face-front {
